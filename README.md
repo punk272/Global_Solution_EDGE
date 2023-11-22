@@ -12,6 +12,8 @@
 O desafio apresentado é: "Como podemos inovar a área da saúde usando a tecnologia?"
 Nesta entrega, com um circuito utilizando ESP32, podemos medir a temperatura e umidade de um local para melhor armazenamento de remédios e vacinas que precisam ser guardados em condições específicas, oferecendo um meio simples de monitorar o armazenamento de medicações tanto para pequenas farmácias, centros médicos e postos de vacinação, quanto para o paciente em casa.
 
+Para facilitar o monitoramento de dados, os valores de temperatura e umidade ficarão slavos em um servidor IoT por meio de FIWARE, através do protocolo MQTT.
+
 ## Componentes
 
 Peças usadas na construção deste circuito:
@@ -36,6 +38,12 @@ Nesta parte do código podemos fazer o ajuste para a temperatura e umidade que d
 ## Simulação
 
 (Clique <a href=https://wokwi.com/projects/381409774330712065/> aqui</a> para ver a simulação completa do projeto.
+
+## Requisitos para conectar-se com o servidor IoT
+
+* Collection FIWARE Postman (FIWARE Descomplicado.postman_collection.json): Recebe e armazena dos dados do ESP32.
+* Código Fonte IDE Arduino (gs_edge.ino): Código principal do circuito, faz todo o processo de captura, leitura de dados e comunicação do microcontrolador com o servidor IoT através de Wi-Fi.
+* Docker e Docker-Compose Ubuntu Server LTS (docker-compose.yml): Software onde o servidor será instalado (Clique <a href=https://docs.docker.com/engine/install/ubuntu/> aqui </a> para ver as instruções de instalação.
 
 ## Autor
 
